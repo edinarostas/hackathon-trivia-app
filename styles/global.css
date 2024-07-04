@@ -54,6 +54,7 @@ li {
 .main {
   background-color: #fefaf8;
   padding: 0.5rem 2rem;
+  border-bottom: 5px solid #bd99bd;
 }
 .main-selectors__subtitle {
   color: #5e1b73;
@@ -89,4 +90,12 @@ li {
   color: #fefaf8;
   padding: 1rem;
   border-radius: 10px;
+}
+
+.question-container {
+  background-color: #fff2ec;
+  padding: 1rem 2rem;
+}
+.question-containerh2 {
+  color: red;
 }/*# sourceMappingURL=global.css.map */
