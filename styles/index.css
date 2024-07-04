@@ -1,8 +1,12 @@
+.scores {
+  padding: 0 5rem;
+}
 .scores__header-layout {
   display: flex;
   width: 100%;
   gap: 14.5rem;
   padding: 0 2rem;
+  justify-content: space-between;
 }
 .scores__score-layout {
   display: flex;

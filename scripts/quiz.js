@@ -99,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const scoreValue = document.querySelector('.header__score');
+    // console.log(scoreValue)
+    let currentScore = Number(scoreValue.innerText);
+    console.log(currentScore)
+
     // Function to handle answer click
     function handleAnswerClick(button, correctAnswer) {
         const selectedAnswer = button.getAttribute('data-answer');
@@ -107,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (selectedAnswer === correctAnswer) {
             button.classList.add('correct');
+            currentScore = currentScore + 1000;
+            scoreValue.innerText = currentScore;
         } else {
             button.classList.add('not-correct');
         }
@@ -130,4 +137,80 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Start quiz button clicked");
         fetchQuestions();
     });
+
+    let userInfo = [
+      {
+        name: "Eberechi",
+        score: 34547484
+      },
+      {
+        name: "Edina",
+        score:629723932
+      },
+      {
+        name: "Haijing",
+        score: 729176273
+      }
+  
+    ];
+  
+    const form = document.getElementById('userForm');
+    console.log(form);
+    const nameInput = document.getElementById('name');
+  
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+  
+      const userName = nameInput.value;
+      console.log(`User name is ${userName}`);
+  
+      const userDetails = {
+        name: userName,
+        score: 0
+      };
+  
+      userInfo.push(userDetails);
+      form.reset();
+    });
+  
+    console.log(userInfo);
+  
+    //get 'View Scores' button
+    const viewScores = document.getElementById('view-scores');
+  
+    //get 'Scores' container
+    const scoreContainer = document.getElementById('scores-container');
+    scoreContainer.classList.add("scores")
+    console.log(viewScores);
+  
+    // function for clicking on 'View Scores' button
+    viewScores.addEventListener('click', () => {
+      scoreContainer.innerHTML = ''
+      const scoresLayout = document.createElement('div');
+      scoresLayout.classList.add("scores__header-layout")
+      const userHeader = document.createElement('h3');
+      const scoreHeader = document.createElement('h3');
+      scoreHeader.classList.add("scores__score-header")
+  
+      userHeader.innerText = "Player Name";
+      scoreHeader.innerText = "Score";
+  
+      scoresLayout.append(userHeader, scoreHeader);
+      scoreContainer.append(scoresLayout);
+  
+      userInfo.forEach((user) => {
+        
+        const userLayout = document.createElement('div');
+        userLayout.classList.add("scores__score-layout");
+        const player = document.createElement('p');
+        player.classList.add("scores__user");
+        const score = document.createElement('p');
+  
+        player.innerText = user.name;
+        score.innerText = user.score;
+  
+        userLayout.append(player, score);
+        scoreContainer.append(userLayout);
+      })
+    })
 });
