@@ -28,7 +28,8 @@ li{
     background-color:$main_4;
     display: flex;
     justify-content: space-around;
-    position: fix;
+    position: fixed;
+    width: 100%;
     &__title{
         color: $light_2;
     }
