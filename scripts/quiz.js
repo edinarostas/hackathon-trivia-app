@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
         quizContainer.innerHTML = `
             <h2>${question.question}</h2>
             <div id="answers-container">
-                ${allAnswers.map(answer => `<button class="answer-button" data-answer="${answer}">${answer}</button>`).join('')}
+                ${allAnswers.map(answer => `<button class="main-selectors__btn answer-button" data-answer="${answer}">${answer}</button>`).join('')}
             </div>
-            <button id="next-question" disabled>Next Question</button>
+            <button class="main-last-options__btn" id="next-question" disabled>Next Question</button>
         `;
 
         // Add event listeners to answer buttons
