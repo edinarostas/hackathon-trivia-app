@@ -26,7 +26,8 @@ li {
   background-color: #5e1b73;
   display: flex;
   justify-content: space-around;
-  position: fix;
+  position: fixed;
+  width: 100%;
 }
 .header__title {
   color: #fff2ec;
@@ -126,7 +127,7 @@ li {
 }
 
 .correct {
-  background-color: #51b845;
+  background-color: #f7d8f7;
   color: #fce1d4;
 }
 
