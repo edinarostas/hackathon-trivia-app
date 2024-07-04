@@ -114,4 +114,23 @@ li {
 }
 .question-containerh2 {
   color: red;
+}
+
+#answers-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#next-question {
+  margin-top: 2rem;
+}
+
+.correct {
+  background-color: #f7d8f7;
+  color: #fce1d4;
+}
+
+.not-correct {
+  background-color: rgb(252, 96, 96);
+  color: black;
 }/*# sourceMappingURL=global.css.map */
