@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     categoryButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             selectedCategory = event.target.getAttribute('id');
+            event.target.classList.add('selected');
             checkSelections();
             console.log('Selected Category:', selectedCategory);
         });
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     difficultyButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             selectedDifficulty = event.target.getAttribute('id');
+            event.target.classList.add('selected');
             checkSelections();
             console.log('Selected Difficulty:', selectedDifficulty);
         });
