@@ -1,23 +1,50 @@
 // start quiz script
 document.addEventListener('DOMContentLoaded', () => {
-    // Adjust this element with the created html element id
+
+    let selectedCategory = null;
+    let selectedDifficulty = null;
+  
+    // Select category buttons
+    const categoryButtons = document.querySelectorAll('.category-selector__options .option__item');
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', (event) => {
+        selectedCategory = event.target.getAttribute('id');
+        console.log('Selected Category:', selectedCategory);
+      });
+    });
+  
+    // Select difficulty buttons
+    const difficultyButtons = document.querySelectorAll('.difficulty-selector__options .option__item');
+    difficultyButtons.forEach(button => {
+      button.addEventListener('click', (event) => {
+        selectedDifficulty = event.target.getAttribute('id');
+        console.log('Selected Difficulty:', selectedDifficulty);
+      });
+    });
+
+    //get the element where the quiz to be displayed
     const questionContainer = document.getElementById('question-container');
-    // Adjust this element with the created button html element id
-    const nextButton = document.getElementById('next-button');
+
+    const startQuiz = document.getElementById('start-quiz');
     let currentQuestionIndex = 0;
     let questions = [];
 
     // Fetch questions from the Open Trivia Database API
     async function fetchQuestions() {
-        // Adjust url with category etc. what we decide on:
-        const url = 'https://opentdb.com/api.php?amount=10&category=18&type=multiple';
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-            questions = data.results;
-            displayQuestion(currentQuestionIndex);
-        } catch (error) {
-            console.error('Error fetching questions:', error);
+        if (selectedCategory && selectedDifficulty !== null) {
+            const apiUrl = `https://opentdb.com/api.php?amount=10&category=${selectedCategory}&difficulty=${selectedDifficulty}&type=multiple`;
+            try {
+                console.log("url:" + apiUrl)
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                questions = data.results;
+                console.log(questions);
+                displayQuestion(currentQuestionIndex);
+            } catch (error) {
+                console.error('Error fetching questions:', error);
+            }
+        } else {
+            alert('Please select a category and difficulty level.');
         }
     }
 
@@ -34,16 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // Event listener for the next button
-    nextButton.addEventListener('click', () => {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            displayQuestion(currentQuestionIndex);
-        } else {
-            // Write function when there are no more questions, for example:
-                // questionContainer.innerHTML = '<h2>Quiz Complete!</h2>';
-                // nextButton.style.display = 'none';
-        }
+    startQuiz.addEventListener('click', () => {
+        console.log("start quiz button clicked")
+        fetchQuestions();
     });
-    fetchQuestions();
 });
