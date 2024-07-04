@@ -20,18 +20,19 @@
 
   <div class="hero"></div>
 
-  <main class="main">
-    <section>
-      <h2>Player Info</h2>
-      <p>Enter you player information below</p>
+  <main >
+    <section class="user">
+      <h2 class="user__title">Player Info</h2>
+      <p class="user__describe">Enter you player information below</p>
       <form id="userForm">
         <div class="form__input">
           <label for="name" class="form__label">Player Name</label>
           <input type="text" id="name" name="name" placeholder="Enter your name"/>
         </div>
-        <button type="submit">Submit</button>
+        <button class="userForm__btn" type="submit">Submit</button>
       </form>
     </section>
+    <div class="main"> 
     <section class="main-selectors">
       <div class="main-selectors__top">
         <h2 class="main-selectors__subtitle">Categories</h2>
@@ -62,43 +63,13 @@
         <button class="main-last-options__btn"  id="view-scores">View Scores</button>
       </div>
     </section>
-    <section id="question-container">
-  <main>
-    <div class="main">
-      <section class="main-selectors">
-        <div class="main-selectors__top">
-          <h2 class="main-selectors__subtitle">Categories</h2>
-          <p class="main-selectors__describe">Click on any of the buttons below to select a quiz category</p>
-        </div>
-        
-        <div class="main-selectors__options category-selector__options">
-          <!-- Categories below are just placeholders, different ones may be used -->
-          <button class="main-selectors__btn option__item" id=18>Science: Computers</button>
-          <button class="main-selectors__btn option__item" id=11>Entertainment: Film</button>
-          <button class="main-selectors__btn option__item" id=21>Sports</button>
-        </div>
-      </section>
-      <section class="main-selectors difficulty-selector">
-        <div class="main-selectors__top">
-          <h2 class="main-selectors__subtitle">Difficulty</h2>
-          <p class="main-selectors__describe">Click on any of the buttons below to select a difficulty level</p>
-        </div>
-        <div class="main-selectors__options difficulty-selector__options">
-          <button class="main-selectors__btn option__item" id="easy">Easy</button>
-          <button class="main-selectors__btn option__item" id="medium">Medium</button>
-          <button class="main-selectors__btn option__item" id="hard">Hard</button>
-        </div>
-      </section>
-      <section>
-        <div class="main-last-options">
-          <button class="main-last-options__btn" id="start-quiz">Start Quiz</button>
-          <button class="main-last-options__btn" >View Scores</button>
-        </div>
-      </section>
     </div>
-
     <section class="question-container" id="question-container">
       <!-- content will be updated via javascript -->
+
+      <!-- question title -->
+      <!-- question options -->
+
     </section>
     <section id="scores-container" class="score">
       <!-- content updated via javascript -->

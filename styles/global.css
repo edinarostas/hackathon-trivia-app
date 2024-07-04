@@ -35,7 +35,7 @@ li {
   color: #fefaf8;
   width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -49,6 +49,22 @@ li {
 .footer__link {
   color: #fff2ec;
   border-bottom: 1px solid #fff2ec;
+}
+
+.user {
+  background-color: #bd99bd;
+  color: #fefaf8;
+  padding: 0.5rem 2rem;
+}
+
+.userForm__btn {
+  background-color: #fce1d4;
+  color: #7b418e;
+  margin: 1rem 0;
+  padding: 0.2rem 1rem;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
 }
 
 .main {

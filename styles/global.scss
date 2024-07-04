@@ -59,10 +59,24 @@ li{
 }
 
 //////////////////////////////////////////////////////
-
+.user{
+    background-color: $main_1;
+    color:$light_1;
+    padding: 0.5rem 2rem;
+}
+.userForm__btn{
+    background-color:$light_4 ;
+    color:$main_3 ;
+    margin: 1rem 0;
+    padding: 0.2rem 1rem ;
+    border: none;
+    border-radius: 2px;
+    font-size: 1rem;
+}
 .main{
     background-color: $light_1 ;
     padding: 0.5rem 2rem;
+    // border: 1px solid red;
     border-bottom: 5px solid #bd99bd;
     &-selectors{
         &__subtitle{
