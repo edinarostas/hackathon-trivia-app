@@ -65,7 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
       fetchQuestions();
   });
 
-  let userInfo = [];
+  let userInfo = [
+    {
+      name: "Eberechi",
+      score: 34547484
+    },
+    {
+      name: "Edina",
+      score:629723932
+    },
+    {
+      name: "Haijing",
+      score: 729176273
+    }
+
+  ];
 
   const form = document.getElementById('userForm');
   console.log(form);
@@ -88,10 +102,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log(userInfo);
 
+  //get 'View Scores' button
   const viewScores = document.getElementById('view-scores');
+
+  //get 'Scores' container
+  const scoreContainer = document.getElementById('scores-container');
+  scoreContainer.classList.add("scores")
   console.log(viewScores);
 
+  // function for clicking on 'View Scores' button
   viewScores.addEventListener('click', () => {
-    
+    scoreContainer.innerHTML = ''
+    const scoresLayout = document.createElement('div');
+    scoresLayout.classList.add("scores__header-layout")
+    const userHeader = document.createElement('h3');
+    const scoreHeader = document.createElement('h3');
+
+    userHeader.innerText = "Player Name";
+    scoreHeader.innerText = "Score";
+
+    scoresLayout.append(userHeader, scoreHeader);
+    scoreContainer.append(scoresLayout);
+
+    userInfo.forEach((user) => {
+      
+      const userLayout = document.createElement('div');
+      userLayout.classList.add("scores__score-layout");
+      const player = document.createElement('p');
+      player.classList.add("scores__user");
+      const score = document.createElement('p');
+
+      player.innerText = user.name;
+      score.innerText = user.score;
+
+      userLayout.append(player, score);
+      scoreContainer.append(userLayout);
+    })
   })
 });

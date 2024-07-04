@@ -1,1 +1,23 @@
 // start index style
+.scores {
+  // display: flex;
+
+  &__header-layout {
+    display: flex;
+    width: 100%;
+    gap: 14.5rem;
+    padding: 0 2rem;
+  }
+
+  &__score-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  &__user {
+    // flex-grow: 1;
+    // width: 50%;
+    flex: 1;
+  }
+}
