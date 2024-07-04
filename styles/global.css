@@ -94,6 +94,10 @@ li {
   border: none;
   padding: 1rem;
   border-radius: 5px;
+
+  &:hover {
+    background-color: #764982;
+  }
 }
 .main-last-options {
   margin-top: 3rem;
