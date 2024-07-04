@@ -99,6 +99,10 @@ li {
     background-color: #764982;
   }
 }
+.selected {
+  background-color: #764982;
+}
+
 .main-last-options {
   margin-top: 3rem;
   display: flex;
