@@ -1,0 +1,14 @@
+.scores__header-layout {
+  display: flex;
+  width: 100%;
+  gap: 14.5rem;
+  padding: 0 2rem;
+}
+.scores__score-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.scores__user {
+  flex: 1;
+}/*# sourceMappingURL=index.css.map */
