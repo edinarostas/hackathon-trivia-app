@@ -1,5 +1,25 @@
-// start quiz script
-document.addEventListener('DOMContentLoaded', () => {
+let userInfo = [];
+
+const form = document.getElementById('userForm');
+console.log(form);
+const nameInput = document.getElementById('name');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const userName = nameInput.value;
+  console.log(`User name is ${userName}`);
+
+  const userDetails = {
+    name: userName,
+    score: 0
+  };
+
+  userInfo.push(userDetails);
+  form.reset();
+});
+
+console.log(userInfo);document.addEventListener('DOMContentLoaded', () => {
 
     let selectedCategory = null;
     let selectedDifficulty = null;
