@@ -87,4 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   console.log(userInfo);
+
+  const viewScores = document.getElementById('view-scores');
+  console.log(viewScores);
+
+  viewScores.addEventListener('click', () => {
+    
+  })
 });

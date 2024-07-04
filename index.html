@@ -11,11 +11,10 @@
   <header class="header">
     <!-- optional logo -->
     <h1 class="header__title">Team 3 Quiz App</h1>
-    <ul class="header-nav">
-      <li class="header-nav__itme">Home</li>
-      <li class="header-nav__itme">High Scores</li>
-      <li class="header-nav__itme">Quiz</li>
-    </ul>
+    <p>
+      Score: 
+      <span class="header__score"></span>
+    </p>
   </header>
 
   <div class="hero"></div>
@@ -32,7 +31,6 @@
         <button type="submit">Submit</button>
       </form>
     </section>
-    
     <section>
       <h2>Categories</h2>
       <p>Click on any of the buttons below to select a quiz category</p>
@@ -55,11 +53,14 @@
     <section>
       <div>
         <button id="start-quiz">Start Quiz</button>
-        <button>View Scores</button>
+        <button id="view-scores">View Scores</button>
       </div>
     </section>
     <section id="question-container">
       <!-- content will be updated via javascript -->
+    </section>
+    <section id="scores-container">
+      <!-- content updated via javascript -->
     </section>
   </main>
 
@@ -77,6 +78,5 @@
       <a href="https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple">Trivia API</a>
     </p>
   </footer>
-  
 </body>
 </html>
