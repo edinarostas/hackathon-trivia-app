@@ -1,0 +1,47 @@
+@use 'partials/variables' as*;
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing:inherit;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: AvenirNextLTPro;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.header{
+    background-color:$main_4;
+    display: flex;
+    justify-content: space-around;
+    &__title{
+        color: $light_2;
+    }
+    &-nav{
+        color: $light_1;
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// .hero{
+//     background-image: url("../assets/hero_img.png");
+//     background-repeat: no-repeat; background-size: cover;
+// }
+

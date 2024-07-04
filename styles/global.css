@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: AvenirNextLTPro;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  background-color: #5e1b73;
+  display: flex;
+  justify-content: space-around;
+}
+.header__title {
+  color: #fff2ec;
+}
+.header-nav {
+  color: #fefaf8;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=global.css.map */
