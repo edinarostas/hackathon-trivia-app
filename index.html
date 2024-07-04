@@ -20,30 +20,35 @@
 
   <div class="hero"></div>
 
-  <main>
-    <section>
-      <h2>Categories</h2>
-      <p>Click on any of the buttons below to select a quiz category</p>
-      <div class="category-selector__options">
+  <main class="main">
+    <section class="main-selectors">
+      <div class="main-selectors__top">
+        <h2 class="main-selectors__subtitle">Categories</h2>
+        <p class="main-selectors__describe">Click on any of the buttons below to select a quiz category</p>
+      </div>
+      
+      <div class="main-selectors__options category-selector__options">
         <!-- Categories below are just placeholders, different ones may be used -->
-        <button class="option__item" id=18>Science: Computers</button>
-        <button class="option__item" id=11>Entertainment: Film</button>
-        <button class="option__item" id=21>Sports</button>
+        <button class="main-selectors__btn option__item" id=18>Science: Computers</button>
+        <button class="main-selectors__btn option__item" id=11>Entertainment: Film</button>
+        <button class="main-selectors__btn option__item" id=21>Sports</button>
       </div>
     </section>
-    <section class="difficulty-selector">
-      <h2>Difficulty</h2>
-      <p>Click on any of the buttons below to select a difficulty level</p>
-      <div class="difficulty-selector__options">
-        <button class="option__item" id="easy">Easy</button>
-        <button class="option__item" id="medium">Medium</button>
-        <button class="option__item" id="hard">Hard</button>
+    <section class="main-selectors difficulty-selector">
+      <div class="main-selectors__top">
+        <h2 class="main-selectors__subtitle">Difficulty</h2>
+        <p class="main-selectors__describe">Click on any of the buttons below to select a difficulty level</p>
+      </div>
+      <div class="main-selectors__options difficulty-selector__options">
+        <button class="main-selectors__btn option__item" id="easy">Easy</button>
+        <button class="main-selectors__btn option__item" id="medium">Medium</button>
+        <button class="main-selectors__btn option__item" id="hard">Hard</button>
       </div>
     </section>
     <section>
-      <div>
-        <button id="start-quiz">Start Quiz</button>
-        <button>View Scores</button>
+      <div class="main-last-options">
+        <button class="main-last-options__btn" id="start-quiz">Start Quiz</button>
+        <button class="main-last-options__btn" >View Scores</button>
       </div>
     </section>
     <section id="question-container">
@@ -51,19 +56,24 @@
     </section>
   </main>
 
-  <footer>
-    <h2>Team 3 Hackaton Quiz App</h2>
+  <footer class="footer">
+    <div class="footer-left">
+      <h2 class="footer__title">Team 3 Hackaton Quiz App</h2>
+      <p>Created with content from 
+        <a class="footer__link" href="https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple">Trivia API</a>
+      </p>
+    </div>
+    <div class="footer-rigth">
+      <p class="footer-right__subtitle">Contributors (in alphabetical order):</p>
+      <ul class="footer-right__list">
+        <li class="footer-rigth__item">Edina Hollo</li>
+        <li class="footer-right__item">Eberechi Omeje</li>
+        <li class="footer-right__item">Haijing Wang</li>
+      </ul>
+    </div>
+    
 
-    <p>Contributors (in alphabetical order):</p>
-    <ul>
-      <li>Edina Hollo</li>
-      <li>Eberechi Omeje</li>
-      <li>Haijing Wang</li>
-    </ul>
-
-    <p>Created with content from 
-      <a href="https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple">Trivia API</a>
-    </p>
+    
   </footer>
   
 </body>

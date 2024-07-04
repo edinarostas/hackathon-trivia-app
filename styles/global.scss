@@ -28,6 +28,7 @@ li{
     background-color:$main_4;
     display: flex;
     justify-content: space-around;
+    position: fix;
     &__title{
         color: $light_2;
     }
@@ -45,3 +46,59 @@ li{
 //     background-repeat: no-repeat; background-size: cover;
 // }
 
+.footer{
+    padding: 0.5rem 2rem;
+    color:  $light_2;
+    background-color:$main_4;
+    display: flex;
+    justify-content: space-between;
+    &__link{
+        color:$light_2;
+        border-bottom: 1px solid $light_2;
+    }
+}
+
+//////////////////////////////////////////////////////
+
+.main{
+    background-color: $light_1 ;
+    padding: 0.5rem 2rem;
+    &-selectors{
+        &__subtitle{
+            color: $main_4;
+            display: flex;
+            justify-content: center;
+        }
+        &__describe{
+            color:$main_3;
+            display: flex;
+            justify-content: center;
+        }
+        &__options{
+            display: flex;
+            justify-content: center;
+            display: flex;
+            gap: 2rem;
+        }
+        &__btn{
+            background-color: $main_2 ;
+            color: $light_2;
+            border: none;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    }
+    &-last-options{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    
+        &__btn{
+            background-color: $main_4;
+            color: $light_1;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+    }
+}
